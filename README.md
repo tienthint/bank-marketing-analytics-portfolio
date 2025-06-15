@@ -2,7 +2,20 @@
 
 This project analyzes a real-world dataset from a Portuguese bank's term deposit marketing campaign. The goal is to build a predictive model to identify customers most likely to subscribe to a term deposit, using demographic, financial, and campaign-related features.
 
+## Project Porfolio
+
+Project 1: Predictive Modeling — Complete  
+Project 2: Customer Segmentation + Power BI  
+Project 3: Campaign Effectiveness Analysis  
+Project 4: Attribution Modeling + Portfolio Polishing  
+
 ---
+
+
+
+---
+
+## Project 1: Predictive Modeling Summary
 
 ## Objective
 
@@ -16,10 +29,6 @@ Predict which customers are most likely to respond positively to a term deposit 
 - Logistic Regression & Random Forest
 - Jupyter Notebooks in VSCode
 - GitHub for version control
-
----
-
-## 📊 Project 1: Predictive Modeling Summary
 
 ### 🔍 Approach
 
@@ -52,19 +61,43 @@ Predict which customers are most likely to respond positively to a term deposit 
 - Contacting customers via **cellular** results in significantly higher success than `telephone` or `unknown`.
 - Education, job type, and campaign frequency also show clear effects on conversion likelihood.
 
+---
+
+## Project 2: Customer Segmentation & Dashboard
+
+In this project, we use unsupervised machine learning to segment banking customers into distinct groups based on their demographic and financial attributes. The goal is to help marketers tailor campaign strategies for each segment.
+
+### Objective
+- Identify meaningful customer segments
+- Profile each group (e.g., age, balance, housing/loan status)
+- Export data for Power BI dashboarding
+
+### Dataset
+- **Source**: [UCI Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
+- **Features Used**:
+  - `age`, `job`, `marital`, `education`, `default`, `balance`, `housing`, `loan`
+
+### Techniques Used
+- One-hot encoding for categorical variables
+- Standardization with `StandardScaler`
+- Clustering using **KMeans**
+- Elbow method for optimal cluster selection
+- Cluster profiling with group statistics
+
+### Result
+- Selected **k=4** clusters based on elbow curve
+- Each cluster shows distinct behavioral and financial traits
+- Conversion rates (`y`) vary significantly across clusters, enabling targeted marketing
+
+### Output
+- `data/customer_clustered.csv`: clustered dataset for Power BI
+- `notebooks/2_customer_segmentation.ipynb`: full code and insights
+- ROC curve and classification metrics from Week 1 used for campaign effectiveness comparison
+
 
 ---
 
-## Project Porfolio
-
-Project 1: Predictive Modeling — Complete  
-Project 2: Customer Segmentation + Power BI  
-Project 3: Campaign Effectiveness Analysis  
-Project 4: Attribution Modeling + Portfolio Polishing  
-
----
-
-## 📫 Author
+## Author
 
 **Thi Nguyen**  
 Marketing Analytics | Data Science | Python | Power BI  
