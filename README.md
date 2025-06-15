@@ -96,44 +96,79 @@ In this project, we use unsupervised machine learning to segment banking custome
 
 
 ---
-## Project 3: Campaign Effectiveness Summary
+# Project 3: Marketing Channel Attribution & Contact Strategy Optimization
 
-### Funnel Overview
-
-The marketing campaign was evaluated using a 3-stage funnel:
-
-| Stage              | Count     |
-|--------------------|-----------|
-| Total Customers    | 45,211    |
-| Contacted          | 45,211    |
-| Converted          | 5,289     |
-| **Conversion Rate** | **11.7%** |
-
-> All customers in the dataset received at least one contact attempt.
+This project analyzes the effectiveness of different marketing outreach strategies from a bank campaign dataset. The goal is to identify which contact methods, outreach frequencies, and previous outcomes contribute to customer conversion, to inform future marketing investments.
 
 ---
 
-### Hypothesis Testing
+## Dataset
 
-We performed statistical tests to validate whether certain features significantly influence customer conversion.
-
-| Hypothesis | Test Type | P-Value | Conclusion |
-|------------|-----------|---------|------------|
-| Education level affects subscription | Chi-Square | ~`1.63e-51` | ✅ Significant |
-| Previous outcome affects current conversion | Chi-Square | ~`0.00` | ✅ Significant |
-| Call duration impacts conversion | T-Test | ~`0.00` | ✅ Significant |
-
-All tested features show a statistically significant relationship with campaign success.
+- **Source**: UCI Bank Marketing Dataset
+- **Records**: 45,211
+- **Target Variable**: `y` – whether the customer subscribed to a term deposit (`yes` / `no`)
+- **Key Features Used**:
+  - `contact`: Marketing contact communication type (cellular, telephone, unknown)
+  - `month`: Last contact month of year
+  - `campaign`: Number of contacts during the current campaign
+  - `poutcome`: Outcome of the previous marketing campaign
+  - `y`: Target response
 
 ---
 
-### Key Insights
+## Key Analyses
 
-- **Education**: Higher education correlates with increased conversion
-- **Poutcome = success**: Strongest predictor of conversion (>65%)
-- **Call duration**: Longer conversations positively influence outcomes
+### Conversion by Contact Method
+| Contact Method | Conversion Rate |
+|----------------|-----------------|
+| Cellular       | 14.9%           |
+| Telephone      | 13.4%           |
+| Unknown        | 4.1%            |
 
-These findings can guide segmentation, call strategy, and retargeting in future campaigns.
+> **Cellular** is the most effective contact channel.
+
+---
+
+### Conversion by Month
+| Best Months | Conversion Rate |
+|-------------|-----------------|
+| March       | 51.9%           |
+| October     | 43.8%           |
+| September   | 46.5%           |
+
+> **May**, despite high volume, had the lowest conversion (6.7%).
+
+---
+
+### Conversion by Campaign Frequency
+| Contact Attempts | Conversion Rate |
+|------------------|-----------------|
+| 1                | 14.6%           |
+| 2                | 11.2%           |
+| >5               | ~2% or lower    |
+
+> High-frequency contact may lead to **diminishing returns**.
+
+---
+
+###  Previous Campaign Outcome
+| Outcome   | Conversion Rate |
+|-----------|-----------------|
+| Success   | 64.7%           |
+| Failure   | 12.6%           |
+| Unknown   | 9.2%            |
+
+> Customers who previously converted are more likely to convert again.
+
+
+---
+
+## Insights & Recommendations
+
+- Use **cellular contact** as the primary outreach channel.
+- Focus marketing efforts in **March, September, and October**.
+- Limit contact attempts to **1–2 times per customer**.
+- Prioritize follow-ups with customers who previously said **"yes"**.
 
 ## Author
 
