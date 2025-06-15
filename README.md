@@ -46,13 +46,13 @@ Predict which customers are most likely to respond positively to a term deposit 
 | Precision (1)   | 0.64                | 0.67           |
 | Recall (1)      | 0.34                | 0.40           |
 | F1-score (1)    | 0.45                | 0.50           |
-| ROC-AUC Score   | **0.91** ✅         | **0.93** ✅    |
+| ROC-AUC Score   | **0.91**            | **0.93**       |
 
 > Note: Class imbalance was present (only ~11.7% subscribed), so we focused on recall and ROC-AUC instead of accuracy.
 
 ---
 
-### 🔑 Key Insights from Modeling
+### Key Insights from Modeling
 
 - **Most predictive features**:
   - `duration` of last contact (note: not usable for targeting)
@@ -96,6 +96,44 @@ In this project, we use unsupervised machine learning to segment banking custome
 
 
 ---
+## Project 3: Campaign Effectiveness Summary
+
+### Funnel Overview
+
+The marketing campaign was evaluated using a 3-stage funnel:
+
+| Stage              | Count     |
+|--------------------|-----------|
+| Total Customers    | 45,211    |
+| Contacted          | 45,211    |
+| Converted          | 5,289     |
+| **Conversion Rate** | **11.7%** |
+
+> All customers in the dataset received at least one contact attempt.
+
+---
+
+### Hypothesis Testing
+
+We performed statistical tests to validate whether certain features significantly influence customer conversion.
+
+| Hypothesis | Test Type | P-Value | Conclusion |
+|------------|-----------|---------|------------|
+| Education level affects subscription | Chi-Square | ~`1.63e-51` | ✅ Significant |
+| Previous outcome affects current conversion | Chi-Square | ~`0.00` | ✅ Significant |
+| Call duration impacts conversion | T-Test | ~`0.00` | ✅ Significant |
+
+All tested features show a statistically significant relationship with campaign success.
+
+---
+
+### Key Insights
+
+- **Education**: Higher education correlates with increased conversion
+- **Poutcome = success**: Strongest predictor of conversion (>65%)
+- **Call duration**: Longer conversations positively influence outcomes
+
+These findings can guide segmentation, call strategy, and retargeting in future campaigns.
 
 ## Author
 
