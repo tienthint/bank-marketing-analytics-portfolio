@@ -4,14 +4,9 @@ This project analyzes a real-world dataset from a Portuguese bank's term deposit
 
 ## Project Porfolio
 
-Project 1: Predictive Modeling — Complete  
-Project 2: Customer Segmentation + Power BI  
-Project 3: Campaign Effectiveness Analysis  
-Project 4: Attribution Modeling + Portfolio Polishing  
-
----
-
-
+Project 1: Predictive Modeling   
+Project 2: Customer Segmentation  
+Project 3: Marketing Channel Attribution & Contact Strategy Optimization
 
 ---
 
@@ -63,7 +58,7 @@ Predict which customers are most likely to respond positively to a term deposit 
 
 ---
 
-## Project 2: Customer Segmentation & Dashboard
+## Project 2: Customer Segmentation
 
 In this project, we use unsupervised machine learning to segment banking customers into distinct groups based on their demographic and financial attributes. The goal is to help marketers tailor campaign strategies for each segment.
 
@@ -92,7 +87,6 @@ In this project, we use unsupervised machine learning to segment banking custome
 ### Output
 - `data/customer_clustered.csv`: clustered dataset for Power BI
 - `notebooks/2_customer_segmentation.ipynb`: full code and insights
-- ROC curve and classification metrics from Week 1 used for campaign effectiveness comparison
 
 
 ---
